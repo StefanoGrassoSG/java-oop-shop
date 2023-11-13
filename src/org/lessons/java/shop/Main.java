@@ -1,10 +1,8 @@
 package org.lessons.java.shop;
 
-import java.util.Random;
-
 public class Main {
 	public static void main(String[] args) {
-			Product p = new Product("cappello", "molto bello", 19.90);
+			Product p = new Product("cappello", "molto bello", 19.90, 20);
 			System.out.println(p + "\n------------------------------------------");
 			
 			

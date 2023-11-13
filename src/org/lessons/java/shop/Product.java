@@ -7,21 +7,21 @@ public class Product {
 	private String name;
 	private String description;
 	private double price;
-	private double vat;
+	private int vat;
 	
-	public Product(String name, String description, double price) {
-		setCode(code);
+	public Product(String name, String description, double price, int vat) {
+		setCode();
 		setName(name);
 		setDescription(description);
 		setPrice(price);
-		setVat();
+		setVat(vat);
 	}
 	
 	public int getCode() {
 		
 		return code;
 	}
-	private void setCode(int code) {
+	private void setCode() {
 		Random rnd = new Random();
 		this.code = rnd.nextInt(100, 1001);
 	}
@@ -57,17 +57,17 @@ public class Product {
 			this.price = price;
 		}
 	}
-	public double getVat() {
+	public int getVat() {
 		
 		return vat;
 	}
-	public void  setVat() {
+	public void  setVat(int vat) {
 		
-		this.vat = 1.21;
+		this.vat = vat;
 	}
 	public double getVatPrice() {
 		
-		return getPrice() * getVat();
+		return getPrice() + (getPrice() * getVat() / 100);
 	}
 	public String getFullName() {
 		
