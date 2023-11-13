@@ -7,13 +7,14 @@ public class Product {
 	private String name;
 	private String description;
 	private double price;
-	private static int vat;
+	private double vat;
 	
 	public Product(String name, String description, double price) {
 		setCode(code);
 		setName(name);
 		setDescription(description);
 		setPrice(price);
+		setVat();
 	}
 	
 	public int getCode() {
@@ -56,12 +57,18 @@ public class Product {
 			this.price = price;
 		}
 	}
-	
+	public double getVat() {
+		
+		return vat;
+	}
+	public void  setVat() {
+		
+		this.vat = 1.21;
+	}
 	public double getVatPrice() {
 		
-		return getPrice() * 1.21;
+		return getPrice() * getVat();
 	}
-	
 	public String getFullName() {
 		
 		return getCode() + "-" + getName();
