@@ -10,7 +10,7 @@ public class Main {
 			
 			p.setName("borsa");
 			p.setDescription("molto brutta");
-			p.setPrice(12.00);
+			p.setPrice(2);
 			System.out.println(p);
 		}
 		
