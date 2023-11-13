@@ -8,7 +8,7 @@ public class Main {
 			System.out.println(p + "\n------------------------------------------");
 			
 			
-			p.setName("Borsa");
+			p.setName("borsa");
 			p.setDescription("molto brutta");
 			p.setPrice(12.00);
 			System.out.println(p);

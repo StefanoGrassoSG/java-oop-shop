@@ -34,24 +34,27 @@ public class Product {
 		return name;
 	}
 	public void setName(String name) {
-		
-		this.name = name;
+		if(name.length() < 128 && name.length() > 0) {
+			this.name = name;
+		}
 	}
 	public String getDescription() {
 		
 		return description;
 	}
 	public void setDescription(String description) {
-		
-		this.description = description;
+		if(description.length() < 500 && description.length() > 0) {
+			this.description = description;
+		}
 	}
 	public double getPrice() {
 		
 		return price;
 	}
 	public void setPrice(double price) {
-		
-		this.price = price;
+		if(price > 0.01) {
+			this.price = price;
+		}
 	}
 	
 	public double getVatPrice() {
