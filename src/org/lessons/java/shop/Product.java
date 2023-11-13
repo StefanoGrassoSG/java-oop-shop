@@ -72,7 +72,6 @@ public class Product {
 				+ "name: " + getName() + "\n"
 				+ "description: " + getDescription() + "\n"
 				+ "price: " + String.format("%.02f", getPrice()) + "$\n"
-				+ "------------------------------------------\n"
 				+ "price with VAT: " + String.format("%.02f", getVatPrice()) + "$\n"
 				+ "Full Name: " + getFullName() + "\n"
 				+ "pad code: " + setCodePad() + "\n";
