@@ -22,8 +22,13 @@ public class Product {
 	}
 	private void setCode(int code) {
 		Random rnd = new Random();
-		this.code = rnd.nextInt(1, 100);
+		this.code = rnd.nextInt(100, 1001);
 	}
+	private String setCodePad() {
+		
+	    return String.format("%08d", getCode());
+	}
+
 	public String getName() {
 		
 		return name;
@@ -69,6 +74,7 @@ public class Product {
 				+ "price: " + String.format("%.02f", getPrice()) + "$\n"
 				+ "------------------------------------------\n"
 				+ "price with VAT: " + String.format("%.02f", getVatPrice()) + "$\n"
-				+ "Full Name: " + getFullName() + "\n";
+				+ "Full Name: " + getFullName() + "\n"
+				+ "pad code: " + setCodePad() + "\n";
 	}
 }
