@@ -9,6 +9,7 @@ public class Main {
 			p.setName("borsa");
 			p.setDescription("molto brutta");
 			p.setPrice(2);
+			p.setVat(30);
 			System.out.println(p);
 		}
 		

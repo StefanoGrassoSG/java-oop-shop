@@ -25,7 +25,7 @@ public class Product {
 	private void setCode(int code) {
 		this.code = code;
 	}
-	private String getCodePad() {
+	public String getCodePad() {
 		
 	    return String.format("%08d", getCode());
 	}
