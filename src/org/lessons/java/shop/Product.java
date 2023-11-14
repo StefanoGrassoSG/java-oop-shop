@@ -10,7 +10,8 @@ public class Product {
 	private int vat;
 	
 	public Product(String name, String description, double price, int vat) {
-		setCode();
+		Random rnd = new Random();
+		setCode(rnd.nextInt(100, 1001));
 		setName(name);
 		setDescription(description);
 		setPrice(price);
@@ -21,11 +22,10 @@ public class Product {
 		
 		return code;
 	}
-	private void setCode() {
-		Random rnd = new Random();
-		this.code = rnd.nextInt(100, 1001);
+	private void setCode(int code) {
+		this.code = code;
 	}
-	private String setCodePad() {
+	private String getCodePad() {
 		
 	    return String.format("%08d", getCode());
 	}
@@ -84,6 +84,6 @@ public class Product {
 				+ "price: " + String.format("%.02f", getPrice()) + "$\n"
 				+ "price with VAT: " + String.format("%.02f", getVatPrice()) + "$\n"
 				+ "Full Name: " + getFullName() + "\n"
-				+ "pad code: " + setCodePad() + "\n";
+				+ "pad code: " + getCodePad() + "\n";
 	}
 }
